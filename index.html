@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form (Task 1) -->
+        <div id="task1" class="form-card">
+            <h1>Group Form</h1>
+            <form id="registrationForm">
+                <div class="name-group">
+                    <div class="form-group">
+                        <label><strong>First name</strong></label>
+                        <input type="text" id="firstName" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <label>Last name</label>
+                        <input type="text" id="lastName" placeholder="Last name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><strong>Email</strong></label>
+                    <input type="email" id="email" placeholder="you@company.com">
+                </div>
+                
+                <div class="form-group">
+                    <label><strong>Password</strong></label>
+                    <input type="password" id="password" placeholder="Password">
+                    <p class="hint">Password must be at least 8 characters long</p>
+                </div>
+                
+                <div class="form-group">
+                    <label><strong>Team Size</strong></label>
+                    <select id="itemSize">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <h3>Technologies</h3>
+                    <div class="tech-grid">
+                        <div class="tech-col">
+                            <label class="tech-option">
+                                <input type="checkbox" name="tech" value="HTML">
+                                <span>HTML</span>
+                            </label>
+                            <label class="tech-option">
+                                <input type="checkbox" name="tech" value="CSS">
+                                <span>CSS</span>
+                            </label>
+                            <label class="tech-option">
+                                <input type="checkbox" name="tech" value="JavaScript">
+                                <span>JavaScript</span>
+                            </label>
+                        </div>
+                        <div class="tech-col">
+                            <label class="tech-option">
+                                <input type="checkbox" name="tech" value="ReactJS">
+                                <span>ReactJS</span>
+                            </label>
+                            <label class="tech-option">
+                                <input type="checkbox" name="tech" value="Figma">
+                                <span>Figma</span>
+                            </label>
+                            <label class="tech-option">
+                                <input type="checkbox" name="tech" value="Github">
+                                <span>Github</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="hint">Choose at least 3 services</p>
+                </div>
+                
+                <button type="submit" class="black-btn">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Number Guessing Game (Task 2 - hidden initially) -->
+        <div id="task2" class="game-card hidden">
+            <div class="game-container">
+                <h1>Guess the Number!</h1>
+                <p>I'm thinking of a number between 1 and 100.</p>
+                
+                <div id="message" class="message"></div>
+                
+                <div class="guess-input">
+                    <input type="number" id="guessInput" min="1" max="100" placeholder="Enter your guess">
+                    <p id="error" class="error"></p>
+                    <div class="buttons">
+                        <button id="guessButton" class="light-red-btn">Guess</button>
+                        <button id="restartButton" class="light-red-btn">Restart</button>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div><strong>Score: <span id="score">10</span></strong></div>
+                    <div><strong>Attempts: <span id="attempts">0</span>/10</strong></div>
+                </div>
+                
+                <div class="history">
+                    <h3>Guess History</h3>
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
